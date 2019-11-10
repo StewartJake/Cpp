@@ -1,0 +1,30 @@
+// ask for a person's name and creates a framed greeting 
+#include <iostream>
+#include <string>
+
+int main()
+{
+    std::cout << "Please enter your name: ";
+    std::string name;
+    std::cin >> name;
+
+    // build message
+    const  std::string greeting = " Hello, " + name + "! ";
+
+    // build second/fourth lines
+    const std::string spaces(greeting.size(), ' ');
+    const std::string second = '*' + spaces  + '*';
+
+    // build first/fifth lines
+    const std::string first(second.size(), '*');
+
+    // write it all
+    std::cout << std::endl;
+    std::cout << first << std::endl;
+    std::cout << second << std::endl;
+    std::cout << '*' << greeting << '*' << std::endl;
+    std::cout << second << std::endl;
+    std::cout << first << std::endl;
+
+    return 0;
+}

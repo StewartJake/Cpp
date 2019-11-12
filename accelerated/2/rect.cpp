@@ -1,4 +1,4 @@
-// draws a square 
+// draws a rectanle 
 #include <iostream>
 #include <string>
 
@@ -20,9 +20,11 @@ int main()
         }
         cin.ignore (1000, '\n');
     }
-    const int length = test_number;
-    const string stars(length, '*');
-    const string space(length - 2, ' ');
+    const int length    = test_number;
+    const int width     = length * 2;
+
+    const string stars(width, '*');
+    const string space(width - 2, ' ');
     cout << endl;
 
     // invariant: we have written r rows so far

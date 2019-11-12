@@ -1,4 +1,4 @@
-// draws a square 
+// draws a right triangle 
 #include <iostream>
 #include <string>
 
@@ -28,13 +28,12 @@ int main()
     // invariant: we have written r rows so far
     for (int r = 0; r < length; ++r)
     {
-        if (r == 0 || r == length - 1)
+        if (r == length - 1)
             cout << stars;
         else
         {
-            cout << '*';
-            cout << space;
-            cout << '*';
+            string stars(r, '*');
+            cout << stars;
         }
         cout << endl;
     }

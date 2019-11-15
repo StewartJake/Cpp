@@ -50,10 +50,10 @@ int main()
     vec_sz first_mid = first_half.size() / 2;
     vec_sz final_mid = final_half.size() / 2;
 
-    double avg;
+    double med;
     double q1;
     double q3;
-    avg = full_size % 2 == 0 ? (numbers[full_mid] + numbers[full_mid - 1]) / 2
+    med = full_size % 2 == 0 ? (numbers[full_mid] + numbers[full_mid - 1]) / 2
                                 :numbers[full_mid];
     q1 = first_size % 2 == 0 ? (numbers[first_mid] + numbers[first_mid - 1]) / 2
                                 :numbers[first_mid];

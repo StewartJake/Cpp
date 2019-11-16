@@ -39,14 +39,16 @@ int main()
 
     sort(numbers.begin(), numbers.end());
     
-    vec_sz full_mid = size / 2;
+    vec_sz full_mid = full_size / 2;
     vector<double>::const_iterator first = numbers.begin();
     vector<double>::const_iterator last = numbers.begin() + full_mid;
     vector<double> first_half(first, last);
     first = last;
     last = numbers.end();
     vector<double> final_half(first, last);
-
+    
+    vec_sz first_size = first_half.size();
+    vec_sz final_size = final_half.size();
     vec_sz first_mid = first_half.size() / 2;
     vec_sz final_mid = final_half.size() / 2;
 
@@ -59,6 +61,13 @@ int main()
                                 :numbers[first_mid];
     q3 = final_size % 2 == 0 ? (numbers[final_mid] + numbers[final_mid - 1]) / 2
                                 :numbers[final_mid];
+    
+    streamsize prec = cout.precision();
+    cout << setprecision(3) << "Q1  is " << q1 << endl;
+    cout << "Med is " << med << endl;
+    cout << "Q3  is " << q3  << endl;
+    cout << setprecision(prec);
+
     // if (size % 2 == 0)
     // {
     //     

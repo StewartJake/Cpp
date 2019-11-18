@@ -43,9 +43,9 @@ int main()
     vector<double>::const_iterator first = numbers.begin();
     vector<double>::const_iterator last = numbers.begin() + full_mid;
     vector<double> first_half(first, last);
-    first = last;
-    last = numbers.end();
-    vector<double> final_half(first, last);
+    vector<double>::const_iterator final_first = numbers.begin() + full_mid;
+    vector<double>::const_iterator final_last = numbers.end();
+    vector<double> final_half(final_first, final_last);
     
     vec_sz first_size = first_half.size();
     vec_sz final_size = final_half.size();
